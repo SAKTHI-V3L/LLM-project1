@@ -1,9 +1,10 @@
 from langchain_groq import ChatGroq
 from langchain_core.prompts import PromptTemplate
 from langchain.document_loaders import WebBaseLoader
+from API_KEY import API
 llm = ChatGroq(
     temperature=2, 
-    groq_api_key='xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx', # use yours if needed
+    groq_api_key=API, # use yours if needed
     model_name="llama-3.1-70b-versatile"
 )
 get_what_need=int(input('enter 1 if plot based on today news,enter 2 if custom headlines needed to be inserted '))
